@@ -1,0 +1,24 @@
+body {
+    background-color: #FF5A5F;
+    font-family: cereal;
+    flex: content;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+button {
+    background-color: #00A699;
+    border-radius: 25%;
+    border:2px solid #767676;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
