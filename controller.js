@@ -1,3 +1,16 @@
+
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '5baa67db356d440095f94da0e3641eaf',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
+
 const myToDos = [
   {
     id: 1,
@@ -13,6 +26,7 @@ let globalId = 3;
 
 module.exports = {
   getAllToDos: (req, res) => {
+    rollbar.info('they want to know all the TODOS!!!')
     res.status(200).send(myToDos);
     // console.log(myToDos);
   },
