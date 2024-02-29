@@ -5,6 +5,8 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
+// helps front end access backend 
+app.use(express.static(`${__dirname}/client`))
 
 const {getAllToDos, addAToDo} = require('./controller');
 
