@@ -3,7 +3,7 @@ const allBtn = document.getElementById("allTasksButton");
 const taskList = document.getElementById("listOfToDos");
 const addForm = document.getElementById("add-to-list");
 
-const baseURL = "http://localhost:4545/api/getToDos";
+const baseURL = "http://localhost:5501/api/getToDos";
 
 // Handler for submit task form
 // START OF HIGHLIGHTED CODE
@@ -29,7 +29,7 @@ function submitHandlerForAdd(evt) {
 //function for getting data to front end
 
 const getMyToDos = () => {
-  axios.get(`http://localhost:4545/api/getToDos`).then((res) => {
+  axios.get(`http://localhost:5501/api/getToDos`).then((res) => {
     // this is an array of objects
     const tasksObj = res.data;
 
